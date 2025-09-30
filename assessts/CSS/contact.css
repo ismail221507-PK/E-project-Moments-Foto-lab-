@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins" sans-serif;
+}
+
+body {
+  background-color: rgb(224, 243, 220);
+
+}
+
+header {
+  background-color: rgba(194, 228, 188, 0.726);
+}
+
+/* Smooth collapse */
+.collapse {
+  transition: all 0.4s ease-in-out;
+}
+
+/* this is for underline effect */
+.navbar-nav .nav-item .underline-effect {
+  position: relative;
+  font-family: "poppins", sans-serif;
+
+}
+
+.navbar-nav .nav-item .underline-effect::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  bottom: 5px;
+  background-color: black;
+  height: 2px;
+  width: 0;
+  z-index: 11;
+  text-align: center;
+  transition: all 0.7s ease-in-out;
+
+}
+
+.navbar-nav .nav-item a:hover {
+  color: rgb(150, 197, 142);
+  transform: translateY(-1px)
+}
+
+.navbar-nav .nav-item .underline-effect:hover::before {
+  width: 100%;
+}
+
+/* Dropdown styling */
+.navbar-nav .dropdown-menu {
+  background-color: rgb(224, 243, 220);
+  border: none;
+}
+
+/* this is for search model  */
+#searchModal .modal-dialog {
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+#searchModal .modal-content {
+  height: 70vh;
+  border-radius: 20px 20px 0 0;
+  animation: slideUp 0.4s ease;
+}
+
+/* Slide-up animation on modal*/
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.close-btn-wrapper .btn-close {
+  font-size: 1.2rem;
+}
+
+/* for cart icon  */
+.cart-items {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.5rem;
+}
+
+/* Overlay */
+#menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease-in-out;
+  z-index: 99;
+}
+
+#menuOverlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+/* contact heading section  */
+.contact-heading {
+  background: url('/assessts/Images/contactCamera.jpg') center/cover no-repeat;
+  height: 50vh;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.contact-heading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.contact-heading h1 {
+  position: relative;
+  font-size: 4rem;
+  z-index: 1;
+  text-shadow: 2px 2px 5px #1D976C;
+
+}
+
+/* Contact Section */
+.contact-container {
+  box-shadow: 2px 2px 5px gray;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.37);
+}
+
+.contact-info p {
+  transition: 0.5s;
+}
+
+.contact-info p i {
+
+
+  color: #0a3d2f;
+  font-size: 1.5rem;
+}
+
+.contact-info p span {
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px #0a3d2f;
+}
+
+.contact-info p:hover {
+  transform: translateY(-8px);
+}
+
+form {
+  background-color: rgba(255, 255, 255, 0.589);
+  border-radius: 10px;
+}
+
+form .btn {
+
+  background-image: linear-gradient(to right, #1D976C 0%, #93F9B9 51%, #1D976C 100%);
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+
+}
+
+form .btn:hover {
+  background-position: right center;
+
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+/* this is for footer  */
+footer {
+  background-color: rgb(15, 15, 61);
+  color: white;
+}
+
+footer .foot-panel1 a {
+  color: white;
+}
+
+footer .foot-panel1 i {
+  font-size: 2rem;
+
+}
+
+
+
+
+
+/* Map */
+.map {
+  margin-top: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+/* Responsive */
+@media(max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .contact-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .contact-info {
+    justify-self: center;
+  }
+
+  form {
+    justify-self: center;
+    width: 90%;
+  }
+}
+
+@media (max-width: 991px) {
+
+  /* Hamburger menu/list menu for mobile or small screen */
+  .navbar-nav .nav-item .underline-effect::before {
+    display: none;
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    right: -40vw;
+    width: 88vw;
+    height: 100vh;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    transition: right 0.4s ease-in-out;
+    z-index: 100;
+  }
+
+  .navbar-collapse.show {
+    right: 0;
+    background-color: rgb(224, 243, 220);
+  }
+
+  .product-categories {
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+  }
+
+
+
+
+}

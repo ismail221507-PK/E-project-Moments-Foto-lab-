@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    background-color: rgb(224, 243, 220);
+
+}
+
+header {
+    background-color: rgba(194, 228, 188, 0.726);
+}
+
+/* Smooth collapse */
+.collapse {
+    transition: all 0.4s ease-in-out;
+}
+
+/* this is for underline effect */
+.navbar-nav .nav-item .underline-effect {
+    position: relative;
+    font-family: "poppins", sans-serif;
+
+}
+
+.navbar-nav .nav-item .underline-effect::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    bottom: 5px;
+    background-color: black;
+    height: 2px;
+    width: 0;
+    z-index: 11;
+    text-align: center;
+    transition: all 0.7s ease-in-out;
+
+}
+
+.navbar-nav .nav-item a:hover {
+    color: rgb(150, 197, 142);
+    transform: translateY(-1px)
+}
+
+.navbar-nav .nav-item .underline-effect:hover::before {
+    width: 100%;
+}
+
+/* this is for cart item value  */
+.cart-items,
+.compare-items {
+    position: relative;
+}
+
+#cart_counter {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    top: -8px;
+    right: 35%;
+    border-radius: 50%;
+    padding: 0 0.2rem;
+    font-size: 0.8rem;
+}
+
+#compare_counter {
+    background-color: rgb(14, 13, 13);
+    color: white;
+    cursor: pointer;
+    position: relative;
+    top: -18px;
+    right: 35%;
+    border-radius: 50%;
+    padding: 0 0.3rem;
+    font-size: 0.8rem;
+}
+
+/* Dropdown styling */
+.navbar-nav .dropdown-menu {
+    background-color: rgb(224, 243, 220);
+    border: none;
+}
+
+/* this is for search model  */
+
+#searchModal .modal-dialog {
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+
+#searchModal .modal-content {
+    height: auto !important;
+    max-height: 100vh;
+    border-radius: 20px 20px 0 0;
+    animation: slideUp 0.4s ease;
+}
+
+#searchModal .modal-body {
+    max-height: 90vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+#searchResults .card {
+    max-width: 360px;
+    margin: auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+#searchResults {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* gap: 1.5rem; */
+
+}
+
+#searchModal form .btn {
+
+    background-image: linear-gradient(to right, #1D976C 0%, #93F9B9 51%, #1D976C 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+
+
+}
+
+#searchModal form .btn:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Slide-up animation on modal*/
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.close-btn-wrapper .btn-close {
+    font-size: 1.2rem;
+}
+
+/* for cart icon  */
+.cart-items {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.5rem;
+}
+
+/* Overlay */
+#menuOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 99;
+}
+
+#menuOverlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Custom responsive compare modal */
+.custom-compare-dialog {
+    width: 70vw;
+    max-width: 70vw;
+    margin: 1.75rem auto;
+}
+
+.custom-compare-dialog .modal-content {
+    height: 90vh;
+    overflow: hidden;
+
+}
+
+.custom-compare-dialog .modal-body {
+    overflow-y: auto;
+
+
+}
+
+/* this is for bannner */
+.main-banner {
+    background-image: url("/assessts/Images/mini\ page\ banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.main-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background: rgba(0, 0, 0, 0.315);
+}
+
+.main-banner h1 {
+    z-index: 12;
+    font-size: 2.5rem;
+    text-shadow: 3px 3px 5px rgb(3, 116, 50);
+}
+
+.main-banner h1::first-letter {
+    font-size: 5rem;
+    color: rgb(164, 238, 164);
+
+}
+
+
+
+/* this is for card  */
+
+.card {
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    cursor: pointer;
+    padding-top: 1rem;
+
+
+}
+
+.card .card-title h2 {
+    font-family: "poppins", sans-serif;
+}
+
+.card img {
+    height: 200px;
+    object-fit: contain;
+
+}
+
+.card:hover .product-image {
+    transform: scale(1.1);
+}
+
+.card:hover {
+
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.card .first-btn {
+    background: linear-gradient(to right, #007991 0%, #78ffd6 51%, #007991 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+
+}
+
+.card .first-btn:hover {
+    background-position: right center;
+
+    color: #fff;
+    text-decoration: none;
+}
+
+.card .sec-btn {
+    background: linear-gradient(to right, #403B4A 0%, #E7E9BB 51%, #403B4A 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+
+}
+
+.card .sec-btn:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.card .third-btn {
+    background: linear-gradient(to right, #1D976C 0%, #93F9B9 51%, #1D976C 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+
+}
+
+.card .third-btn:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+
+
+/* this is for footer  */
+footer {
+    background-color: rgb(15, 15, 61);
+    color: white;
+}
+
+footer .foot-panel1 a {
+    color: white;
+}
+
+footer .foot-panel1 i {
+    font-size: 2rem;
+
+}
+
+
+
+@media (max-width: 991px) {
+
+    /* Hamburger menu/list menu for mobile or small screen */
+    .navbar-nav .nav-item .underline-effect::before {
+        display: none;
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        right: -40vw;
+        width: 88vw;
+        height: 100vh;
+        background: #fff;
+        padding: 1rem;
+        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+        transition: right 0.4s ease-in-out;
+        z-index: 100;
+    }
+
+    .navbar-collapse.show {
+        right: 0;
+        background-color: rgb(224, 243, 220);
+    }
+
+    .product-categories {
+        border-top: 1px solid #ddd;
+        padding-top: 1rem;
+    }
+
+    .custom-compare-dialog {
+        width: 80vw;
+        max-width: 80vw;
+        margin: 1rem auto;
+    }
+
+
+}
+
+
+
+
+@media (max-width: 576px) {
+    .custom-compare-dialog {
+        width: 100vw;
+        max-width: 100vw;
+        margin: 0;
+    }
+}

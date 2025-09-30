@@ -1,0 +1,988 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home-Fotolab</title>
+    <!-- This is for bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!-- This is for jquery cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- jQuery for brand slider -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- this is for animation cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- this is for css file  -->
+    <link rel="stylesheet" href="/assessts/CSS/index.css">
+    <!-- this is for icon cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS CSS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- Top Navbar -->
+        <nav class="navbar navbar-expand-lg border-bottom">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="/assessts/Images/logo (foto lab).png" data-aos="zoom-in" data-aos-duration="1000"
+                        alt="Bootstrap" width="70" height="64">
+                </a>
+
+                <!-- Small screen: Search + Cart -->
+                <div class="d-flex d-lg-none ms-auto me-2 align-items-center gap-2">
+                    <i class="fa-solid fa-magnifying-glass" data-bs-toggle="modal" data-bs-target="#searchModal"
+                        style="cursor:pointer; font-size:20px;"></i>
+                    <div class="cart-items" data-bs-toggle="modal" data-bs-target="#cart-modal">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart_counter">0</span>
+                    </div>
+                    <div class="compare-items" data-bs-toggle="modal" data-bs-target="#compare-modal">
+                        <i class="fa-solid fa-code-compare"></i>
+                        <span id="compare_counter">0</span>
+                    </div>
+                </div>
+
+
+                <!-- Hamburger -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapsible Menu -->
+                <div class="collapse navbar-collapse" id="navbarMenu">
+
+                    <!-- Close button (inside collapse - only on mobile) -->
+                    <div class="close-btn-wrapper d-lg-none p-3 text-right">
+                        <button type="button" class="btn-close" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <!-- Main Nav -->
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0 gap-lg-4 text-center">
+                        <li class="nav-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100"><a
+                                class="nav-link active underline-effect" href="/all main pages/index.html">Home</a></li>
+                        <li class="nav-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200"><a
+                                class="nav-link underline-effect" href="/all main pages/contact.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"><a
+                                class="nav-link underline-effect" href="/all main pages/about.html">About Us</a></li>
+                    </ul>
+
+                    <!-- Large screen: Search + Cart + compare-->
+                    <div class="d-none d-lg-flex align-items-center gap-2">
+                        <i class="fa-solid fa-magnifying-glass" data-bs-toggle="modal" data-bs-target="#searchModal"
+                            style="cursor:pointer; font-size:20px;"></i>
+                        <div class="cart-items" data-bs-toggle="modal" data-bs-target="#cart-modal">
+                            <i class="fa-solid fa-cart-shopping" style="font-size: 30px;"></i>
+                            <span id="cart_counter">0</span>
+                        </div>
+                        <div class="compare-items" data-bs-toggle="modal" data-bs-target="#compare-modal">
+                            <i class="fa-solid fa-code-compare" style="font-size: 33px;"></i>
+                            <span id="compare_counter">0</span>
+
+                        </div>
+                    </div>
+
+                    <!-- Categories 0n small devices -->
+                    <ul class="navbar-nav flex-column d-lg-none text-center gap-2 product-categories">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle underline-effect" data-aos="zoom-in"
+                                data-aos-duration="1000" data-aos-delay="100"
+                                href="/all main pages/productpages/camera.html" data-bs-toggle="dropdown">Camera</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/camera.html#mirrorless-camera">Mirrorless
+                                        Cameras</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/camera.html#dslr-camera">DSLR Cameras</a>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/camera.html#point&shoot-camera">Point & Shoot
+                                        Cameras</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle underline-effect"
+                                href="/all main pages/productpages/lens.html" data-bs-toggle="dropdown"
+                                data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="150">Lenses</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/lens.html#mirrorless-lens">Mirrorless
+                                        Lenses</a>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/lens.html#dslr-lens">DSLR
+                                        Lenses</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/lens.html#lens-accessories">Lens
+                                        Accessories</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle underline-effect"
+                                href="/all main pages/productpages/audio.html" data-bs-toggle="dropdown"
+                                data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+
+                                Audio
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/audio.html#microphone">Microphones</a></li>
+                                <li class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/audio.html#wireless-microphone">Wireless
+                                        Microphones</a></li>
+                                <li class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/audio.html#podcasting-microphone">Podcasting</a>
+                                </li>
+                                <li class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/audio.html#mobile-microphone">Mobile
+                                        Recording</a></li>
+                                <li class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/audio.html#studio-microphone">Studio
+                                        Recording</a></li>
+                                <li class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/audio.html#audio-accessories">Audio
+                                        Accessories</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle underline-effect"
+                                href="/all main pages/productpages/light.html" data-bs-toggle="dropdown"
+                                data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="250">
+                                Lighting & Studio
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/light.html#Continuous-lighing">Continuous
+                                        Lighting</a></li>
+                                <li class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/light.html#strobe-lighing">Strobe
+                                        Lighting</a>
+                                </li>
+                                <li class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/light.html#flash-lighing">Flash And On Camera
+                                        Lighting</a></li>
+                                <li class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/light.html#light-accessories">Lighting
+                                        Accessories</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle underline-effect"
+                                href="/all main pages/productpages/accessory.html" data-bs-toggle="dropdown"
+                                data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+                                Accessories
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/accessory.html#mCards-accessories">Memory
+                                        cards &
+                                        media</a></li>
+                                <li class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/accessory.html#tripod-accessories">Tripods &
+                                        supports</a></li>
+                                <li class="dropdown-divider">
+                                </li>
+
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/accessory.html#bag-accessories">Camera bags &
+                                        cases</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Large screen categories -->
+        <div class="d-none d-lg-block" style="background-color: rgb(224, 243, 220);">
+            <div class="container-fluid">
+                <ul class="navbar-nav d-flex flex-row justify-content-center gap-4 py-2 product-categories">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle underline-effect" data-aos="zoom-in" data-aos-duration="1000"
+                            data-aos-delay="100" href="/all main pages/productpages/camera.html"
+                            data-bs-toggle="dropdown">Camera</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/camera.html#mirrorless-camera">Mirrorless
+                                    Cameras</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/camera.html#dslr-camera">DSLR Cameras</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/camera.html#point&shoot-camera">Point & Shoot
+                                    Cameras</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle underline-effect"
+                            href="/all main pages/productpages/lens.html" data-bs-toggle="dropdown" data-aos="zoom-in"
+                            data-aos-duration="1000" data-aos-delay="150">Lenses</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/lens.html#mirrorless-lens">Mirrorless Lenses</a>
+                            </li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/all main pages/productpages/lens.html#dslr-lens">DSLR
+                                    Lenses</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/lens.html#lens-accessories">Lens Accessories</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle underline-effect"
+                            href="/all main pages/productpages/audio.html" data-bs-toggle="dropdown" data-aos="zoom-in"
+                            data-aos-duration="1000" data-aos-delay="200">
+
+                            Audio
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/audio.html#microphone">Microphones</a></li>
+                            <li class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/audio.html#wireless-microphone">Wireless
+                                    Microphones</a></li>
+                            <li class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/audio.html#podcasting-microphone">Podcasting</a>
+                            </li>
+                            <li class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/audio.html#mobile-microphone">Mobile
+                                    Recording</a></li>
+                            <li class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/audio.html#studio-microphone">Studio
+                                    Recording</a></li>
+                            <li class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/audio.html#audio-accessories">Audio
+                                    Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle underline-effect"
+                            href="/all main pages/productpages/light.html" data-bs-toggle="dropdown" data-aos="zoom-in"
+                            data-aos-duration="1000" data-aos-delay="250">
+                            Lighting & Studio
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/light.html#Continuous-lighing">Continuous
+                                    Lighting</a></li>
+                            <li class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/light.html#strobe-lighing">Strobe Lighting</a>
+                            </li>
+                            <li class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/light.html#flash-lighing">Flash And On Camera
+                                    Lighting</a></li>
+                            <li class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/light.html#light-accessories">Lighting
+                                    Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle underline-effect"
+                            href="/all main pages/productpages/accessory.html" data-bs-toggle="dropdown"
+                            data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+                            Accessories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/accessory.html#mCards-accessories">Memory cards &
+                                    media</a></li>
+                            <li class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/accessory.html#tripod-accessories">Tripods &
+                                    supports</a></li>
+                            <li class="dropdown-divider">
+                            </li>
+
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/accessory.html#bag-accessories">Camera bags &
+                                    cases</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Half Screen Search Modal & Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <form class="d-flex w-75 mb-3">
+                        <div class="input-group input-group-lg">
+                            <input id="searchInput" type="search" class="form-control" style=" box-shadow: none;"
+                                placeholder="Search products...">
+                            <button class="btn btn-success" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <!-- Close Button -->
+                    <div class="close-btn-wrapper text-end py-3 px-2">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                </div>
+                <div class="modal-body border-top">
+                    <div id="searchResults" class="row g-3 my-5"></div>
+                    <p id="noResults" class="text-center text-muted d-none">No products found</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- this is for cart body  -->
+    <div class="modal fade" id="cart-modal" tabindex="-1">
+        <div class="modal-dialog custom-compare-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cart Items</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body overflow-auto">
+                    <table class="table text-center table-striped" id="card_table">
+                        <thead>
+                            <tr>
+                                <th>Sr. No.</th>
+                                <th>Product</th>
+                                <th>Product Image</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody class="shopping-list">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- this is for compare body  -->
+    <div class="modal fade" id="compare-modal" tabindex="-1">
+        <div class="modal-dialog custom-compare-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Compare Items</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body overflow-auto">
+                    <table class="table text-center table-striped" id="compare_table">
+                        <thead>
+                            <tr>
+                                <th>Sr. No.</th>
+                                <th>Product</th>
+                                <th>Product Image</th>
+                                <th>Price</th>
+                                <th>Key Features</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Overlay for mobile menu like blackish effect -->
+    <div id="menuOverlay"></div>
+
+    <main>
+        <section class="slider ">
+            <!-- Particles -->
+            <div class="particles"></div>
+
+            <!-- Bootstrap Carousel -->
+            <div id="cameraCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                data-bs-interval="4000">
+
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="carousel-content">
+                            <div class="text" data-aos="fade-right" data-aos-duration="1000">
+                                <h1>Digital Camera</h1>
+                                <p>Best Sales & Services for Cameras and Accessories</p>
+                            </div>
+                            <div class="slider-img" data-aos="fade-left" data-aos-duration="1000">
+                                <img src="/assessts/Images/home page images/camera-slider-image.png" alt="Camera"
+                                    class="camera3d">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="carousel-content">
+                            <div class="text" data-aos="fade-right" data-aos-duration="1000">
+                                <h1>Focus Lenses</h1>
+                                <p>High quality lenses for your perfect shots</p>
+                            </div>
+                            <div class="slider-img" data-aos="fade-left" data-aos-duration="1000">
+                                <img src="/assessts/Images/home page images/lens_slider_image.png" alt="Lens"
+                                    class="camera3d">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="carousel-content">
+                            <div class="text" data-aos="fade-right" data-aos-duration="1000">
+                                <h1>Accessories</h1>
+                                <p>All accessories you need for photography</p>
+                            </div>
+                            <div class="slider-img" data-aos="fade-left" data-aos-duration="1000">
+                                <img src="/assessts/Images/home page images/slider-tripod-image.png" alt="Tripod"
+                                    class="camera3d">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#cameraCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cameraCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </section>
+        <!-- tgis is for special product that display on landing page  -->
+        <section class="product-cards-area py-4">
+            <h1 class="text-center p-4 border-bottom" data-aos="fade-up">Our Products</h1>
+
+            <section class="camera border-bottom pb-3">
+                <div class="container-fluid">
+                    <h1 class="text-center pb-4" data-aos="fade-up">Cameras Related Products</h1>
+                    <div class="row">
+                        <!-- Camera Banner (always full width on small & medium devices) -->
+                        <div class="col-12 col-lg-3 d-none d-md-grid" data-aos="fade-right" data-aos-delay="100">
+                            <div class="camera-banner ">
+                                <img src="/assessts/Images/home page images/camera banner h.jpg" alt="Camera Banner"
+                                    class="img-fluid w-100" style="height: 100%;">
+                            </div>
+                        </div>
+
+                        <!-- Product Cards -->
+                        <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                            <div class="card mt-3 mt-lg-0">
+                                <img src="/assessts/Images/camera page images/Nikon_D850.png"
+                                    class="img-fluid card-img-top product-image" alt="">
+                                <div class="card-body">
+                                    <div class="card-title text-center">
+                                        <h2>Nikon D850 </h2>
+                                        <span> PKR 685,000.00</span>
+                                    </div>
+                                    <ul class="product-feature">
+                                        <li>45.7MP BSI CMOS Sensor </li>
+                                        <li>4K UHD video </li>
+                                        <li>High-Speed </li>
+                                    </ul>
+                                    <button class="btn first-btn"><a
+                                            href="/assessts/Images/camera page images/doc/Nikon D850 — Product Detail Sheet.pdf"
+                                            download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                    <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                    <button class="btn third-btn">Add To Cart</button>
+                                    <button class="btn sec-btn d-xl-none d-inline "><i
+                                            class="fa-solid fa-code-compare"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                            <div class="card mt-3 mt-lg-0">
+                                <img src="/assessts/Images/camera page images/Canon EOS 3000D.png"
+                                    class="img-fluid card-img-top product-image" alt="">
+                                <div class="card-body">
+                                    <div class="card-title text-center">
+                                        <h2>EOS 3000D </h2>
+                                        <span> PKR 119,999</span>
+                                    </div>
+                                    <ul class="product-feature">
+                                        <li>Autofocus & Shooting Speed </li>
+                                        <li>Rear LCD monitor-2.7-inch </li>
+                                        <li>Video Capabilities1080p / 30 fps </li>
+                                    </ul>
+                                    <button class="btn first-btn"><a
+                                            href="/assessts/Images/camera page images/doc/Canon EOS 3000D.pdf"
+                                            download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                    <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                    <button class="btn third-btn">Add To Cart</button>
+                                    <button class="btn sec-btn d-xl-none d-inline "><i
+                                            class="fa-solid fa-code-compare"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                            <div class="card mt-3 mt-lg-0">
+                                <img src="/assessts/Images/camera page images/Sony_α6700.png"
+                                    class="img-fluid card-img-top product-image" alt="">
+                                <div class="card-body">
+                                    <div class="card-title text-center">
+                                        <h2>Sony α6700</h2>
+                                        <span> PKR 685,000.00</span>
+                                    </div>
+                                    <ul class="product-feature">
+                                        <li>High-Quality 4K Video </li>
+                                        <li>Autofocus Real-Time Tracking </li>
+                                        <li>26MP Exmor R Sensor </li>
+                                    </ul>
+                                    <button class="btn first-btn"><a
+                                            href="/assessts/Images/camera page images/doc/Sony A6700 Product Page.pdf"
+                                            download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                    <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                    <button class="btn third-btn">Add To Cart</button>
+                                    <button class="btn sec-btn d-xl-none d-inline "><i
+                                            class="fa-solid fa-code-compare"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="lenses border-bottom pb-3">
+                <div class="container-fluid">
+                    <h1 class="text-center mt-4 pb-4" data-aos="fade-up">Camera lenses Related Products</h1>
+                    <div class="row">
+                        <!-- Camera Banner (always full width on small & medium devices) -->
+                        <div class="col-12 col-lg-3 d-none d-md-grid" data-aos="fade-right" data-aos-delay="100">
+                            <div class="lens-banner ">
+                                <img src="/assessts/Images/home page images/lens banner home.webp" alt="Camera Banner"
+                                    class="img-fluid w-100 " style="height: 100%;">
+                            </div>
+                        </div>
+
+                        <!-- lenses Product Cards -->
+                        <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                            <div class="card mt-3 mt-lg-0">
+                                <img src="/assessts/Images/lens page images/EF 50mm f-1.8 STM.jpg"
+                                    class="img-fluid card-img-top product-image" alt="Canon EF 50mm f/1.8 STM">
+                                <div class="card-body">
+                                    <div class="card-title text-center">
+                                        <h2>EF 50mm f/1.8</h2>
+                                        <span> PKR 35,000</span>
+                                    </div>
+                                    <ul class="product-feature">
+                                        <li>Bright f/1.8 Aperture</li>
+                                        <li>Full-Frame & APS-C</li>
+                                        <li>Stepping-Motor AF </li>
+                                    </ul>
+                                    <button class="btn first-btn"><a
+                                            href="/assessts/Images/lens page images/doc/Canon Ef 50mm F18 Stm Lens Product Page.pdf"
+                                            download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                    <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                    <button class="btn third-btn">Add To Cart</button>
+                                    <button class="btn sec-btn d-xl-none d-inline "><i
+                                            class="fa-solid fa-code-compare"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                            <div class="card mt-3 mt-lg-0">
+                                <img src="/assessts/Images/lens page images/Canon RF 50mm.jpg"
+                                    class="img-fluid card-img-top product-image" alt="Sony FE 24-70mm f/2.8 GM">
+                                <div class="card-body">
+                                    <div class="card-title text-center">
+                                        <h2>Canon RF 50mm </h2>
+                                        <span> PKR 62,000</span>
+                                    </div>
+                                    <ul class="product-feature">
+                                        <li>Compact & Lightweight </li>
+                                        <li>STM Stepping Motor</li>
+                                        <li>Super Spectra Coating </li>
+                                    </ul>
+                                    <button class="btn first-btn"><a
+                                            href="/assessts/Images/lens page images/doc/Canon Rf 50mm Lens Product Page.pdf"
+                                            download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                    <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                    <button class="btn third-btn">Add To Cart</button>
+                                    <button class="btn sec-btn d-xl-none d-inline "><i
+                                            class="fa-solid fa-code-compare"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                            <div class="card mt-3 mt-lg-0">
+                                <img src="/assessts/Images/lens page images/NIKKOR Z 24-70mm.jpg"
+                                    class="img-fluid card-img-top product-image" alt="Nikon NIKKOR Z 24mm f/1.8 S">
+                                <div class="card-body">
+                                    <div class="card-title text-center">
+                                        <h2> Z 24-70mm </h2>
+                                        <span> PKR 90,000</span>
+                                    </div>
+                                    <ul class="product-feature">
+                                        <li>Constant f/4 Aperture </li>
+                                        <li>Advanced Optics </li>
+                                        <li>Internal Zoom </li>
+                                    </ul>
+                                    <button class="btn first-btn"><a
+                                            href="/assessts/Images/lens page images/doc/Nikkor Z 24 70mm Lens Product Page.pdf"
+                                            download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                    <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                    <button class="btn third-btn">Add To Cart</button>
+                                    <button class="btn sec-btn d-xl-none d-inline "><i
+                                            class="fa-solid fa-code-compare"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="Audio border-bottom pb-3">
+                <div class="container-fluid">
+                    <h1 class="text-center mt-4 pb-4" data-aos="fade-up">Audio Related Products</h1>
+                    <div class="row">
+                        <!-- Camera Banner (always full width on small & medium devices) -->
+                        <div class="col-12 col-lg-3 d-none d-md-grid" data-aos="fade-right" data-aos-delay="100">
+                            <div class="audio-banner ">
+                                <img src="/assessts/Images/home page images/audio banner home.webp" alt="Audio Banner"
+                                    class="img-fluid w-100 " style="height: 100%;">
+                            </div>
+                        </div>
+
+                        <!-- Product Cards -->
+                        <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                            <div class="card mt-3 mt-lg-0">
+                                <img src="/assessts/Images/audio page images/SM6.jpg"
+                                    class="img-fluid card-img-top product-image" alt="Samson C01U Pro">
+                                <div class="card-body">
+                                    <div class="card-title text-center">
+                                        <h2>SM6</h2>
+                                        <span> PKR 9,500</span>
+                                    </div>
+                                    <ul class="product-feature">
+                                        <li>Mic isolation</li>
+                                        <li>Built-in pop filter</li>
+                                        <li>Adjustable angle</li>
+                                    </ul>
+                                    <button class="btn first-btn"><a
+                                            href="/assessts/Images/audio page images/doc/Sm6 Microphone Shockmount Product Page.pdf"
+                                            download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                    <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                    <button class="btn third-btn">Add To Cart</button>
+                                    <button class="btn sec-btn d-xl-none d-inline "><i
+                                            class="fa-solid fa-code-compare"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                            <div class="card mt-3 mt-lg-0">
+                                <img src="/assessts/Images/audio page images/ATH-M20x.jpg"
+                                    class="img-fluid card-img-top product-image" alt="Audio-Technica ATH-M50x">
+                                <div class="card-body">
+                                    <div class="card-title text-center">
+                                        <h2>ATH-M20x</h2>
+                                        <span> PKR 15,000</span>
+                                    </div>
+                                    <ul class="product-feature">
+                                        <li>Closed-back</li>
+                                        <li>Flat sound</li>
+                                        <li>Comfortable pads</li>
+                                    </ul>
+                                    <button class="btn first-btn"><a
+                                            href="/assessts/Images/audio page images/doc/Ath M20x Headphones Product Page.pdf"
+                                            download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                    <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                    <button class="btn third-btn">Add To Cart</button>
+                                    <button class="btn sec-btn d-xl-none d-inline "><i
+                                            class="fa-solid fa-code-compare"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="  col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                            <div class="card mt-3 mt-lg-0">
+                                <img src="/assessts/Images/audio page images/Mini 12 Dual.jpg"
+                                    class="img-fluid card-img-top product-image" alt="Saramonic BlinkMe Wireless">
+                                <div class="card-body">
+                                    <div class="card-title text-center">
+                                        <h2>Mini 12 Dual</h2>
+                                        <span> PKR 19,000</span>
+                                    </div>
+                                    <ul class="product-feature">
+                                        <li>Dual wireless mics</li>
+                                        <li>Comes with charging case</li>
+                                        <li>Android Type-C & iPhone support</li>
+                                    </ul>
+                                    <button class="btn first-btn"><a
+                                            href="/assessts/Images/audio page images/doc/Mini 12 Dual Microphone Product Page.pdf"
+                                            download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                    <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                    <button class="btn third-btn">Add To Cart</button>
+                                    <button class="btn sec-btn d-xl-none d-inline "><i
+                                            class="fa-solid fa-code-compare"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lighting border-bottom pb-3">
+                <div class="container-fluid">
+                    <h1 class="text-center mt-4 pb-4" data-aos="fade-up">Lighting Related Products</h1>
+                    <div class="row">
+                        <!-- Camera Banner (always full width on small & medium devices) -->
+                        <div class="col-12 col-lg-3 d-none d-md-grid" data-aos="fade-right" data-aos-delay="100">
+                            <div class="lighting-banner ">
+                                <img src="/assessts/Images/home page images/lighting studio bnner.png"
+                                    alt="Audio Banner" class="img-fluid w-100 " style="height: 100%;">
+                            </div>
+                        </div>
+
+                        <!-- Product Cards -->
+                        <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                            <div class="card mt-3 mt-lg-0">
+                                <img src="/assessts/Images/light page images/Godox Gel Kit.jpg"
+                                    class="img-fluid card-img-top product-image" alt="Godox AD200Pro Pocket Flash">
+                                <div class="card-body">
+                                    <div class="card-title text-center">
+                                        <h2>Godox Gel Kit</h2>
+                                        <span> PKR 3,200</span>
+                                    </div>
+                                    <ul class="product-feature">
+                                        <li>12 vibrant gel colors</li>
+                                        <li>Heat resistant material</li>
+                                        <li>Easy to attach with Velcro</li>
+                                    </ul>
+                                    <button class="btn first-btn"><a
+                                            href="/assessts/Images/light page images/doc/Godox Gel Kit.pdf" download=""
+                                            style="text-decoration: none; color: white;">Detail</a></button>
+                                    <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                    <button class="btn third-btn">Add To Cart</button>
+                                    <button class="btn sec-btn d-xl-none d-inline "><i
+                                            class="fa-solid fa-code-compare"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                            <div class="card mt-3 mt-lg-0">
+                                <img src="/assessts/Images/light page images/Neewer Filter.jpg"
+                                    class="img-fluid card-img-top product-image" alt="Neewer 700W Lighting Kit ">
+                                <div class="card-body">
+                                    <div class="card-title text-center">
+                                        <h2>Neewer Filter</h2>
+                                        <span> PKR 3,200</span>
+                                    </div>
+                                    <ul class="product-feature">
+                                        <li>8 standard colors</li>
+                                        <li>Durable polyester film</li>
+                                        <li>For flash & LED lights</li>
+                                    </ul>
+                                    <button class="btn first-btn"><a
+                                            href="/assessts/Images/light page images/doc/Neewer Filter Page.pdf"
+                                            download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                    <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                    <button class="btn third-btn">Add To Cart</button>
+                                    <button class="btn sec-btn d-xl-none d-inline "><i
+                                            class="fa-solid fa-code-compare"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                            <div class="card mt-3 mt-lg-0">
+                                <img src="/assessts/Images/light page images/Lastolite 30.jpg"
+                                    class="img-fluid card-img-top product-image"
+                                    alt=" Lume Cube XL Studio Lighting Kit">
+                                <div class="card-body">
+                                    <div class="card-title text-center">
+                                        <h2>Lastolite 30"</h2>
+                                        <span> PKR 5,999</span>
+                                    </div>
+                                    <ul class="product-feature">
+                                        <li>High-quality materials</li>
+                                        <li>Durable frame</li>
+                                        <li>Easy to fold & store</li>
+                                    </ul>
+                                    <button class="btn first-btn"><a
+                                            href="/assessts/Images/light page images/doc/Studio Light Lastolite 30inch.pdf"
+                                            download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                    <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                    <button class="btn third-btn">Add To Cart</button>
+                                    <button class="btn sec-btn d-xl-none d-inline "><i
+                                            class="fa-solid fa-code-compare"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </section>
+        <!-- this is for brand section  -->
+        <section class="brands-name border-bottom px-5">
+            <h1 class="text-center" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">Brands</h1>
+            <div class="container brand-slider" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+                <div class="brand-carousel">
+
+                    <div><img src="/assessts/Images/home page images/brand-1.jpg" alt="Brand 1"></div>
+                    <div><img src="/assessts/Images/home page images/brand-2.png" alt="Brand 2"></div>
+                    <div><img src="/assessts/Images/home page images/brand-3.png" alt="Brand 3">
+                    </div>
+                    <div><img src="/assessts/Images/home page images/brand-4.png" alt="Brand 4"></div>
+                    <div><img src="/assessts/Images/home page images/brand-5.png" alt="Brand 5"></div>
+                    <div><img src="/assessts/Images/home page images/brand-6.png" alt="Brand 6"></div>
+                    <div><img src="/assessts/Images/home page images/brand-7.png" alt="Brand 7"></div>
+                    <div><img src="/assessts/Images/home page images/brand-8.png" alt="Brand 8"></div>
+                    <div><img src="/assessts/Images/home page images/brand-9.png" alt="Brand 9"></div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="foot-panel1 gap-md-4 border-bottom py-4">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6  text-center">
+                        <a class="navbar-brand" href="#">
+                            <img src="/assessts/Images/logo (foto lab).png" alt="Bootstrap" width="95" height="84"
+                                style="filter: invert(1);">
+                        </a>
+                        <p>For Digital Camera, <span class="d-block">Since 1997</span></p>
+
+                    </div>
+                    <div class="col-lg-3 col-md-6  text-center text-lg-start">
+                        <h2>Quick Links</h2>
+                        <ul class="list-unstyled">
+
+                            <li><a href="/all main pages/index.html" class="text-decoration-none">Home</a></li>
+                            <li><a href="/all main pages/about.html" class="text-decoration-none">About</a></li>
+                            <li><a href="/all main pages/contact.html" class="text-decoration-none">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center text-lg-start">
+                        <h2>Service we Provide</h2>
+                        <ul class="list-unstyled">
+
+                            <li><a href="./productpages/camera.html" class="text-decoration-none">Camera</a></li>
+                            <li><a href="./productpages/lens.html" class="text-decoration-none">Camera Lenses</a></li>
+                            <li><a href="./productpages/audio.html" class="text-decoration-none">Pro Audio</a></li>
+                            <li><a href="./productpages/light.html" class="text-decoration-none">Lighting & Studio</a>
+                            </li>
+                            <li><a href="./productpages/accessory.html" class="text-decoration-none">Accessories</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center text-lg-start ">
+                        <h2>Follow Us</h2>
+                        <div class="d-flex justify-content-center gap-3"> <i class="fa-brands fa-youtube "
+                                style="color: #ff1e05;"></i>
+                            <i class="fa-brands fa-instagram rounded"
+                                style="background: linear-gradient(#feda75, #fa7e1e,#d62976, #962fbf,#4f5bd5);"></i>
+                            <i class="fa-brands fa-facebook" style="color: #1046a2;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot-panel2 py-2 ">
+            <div class="text-center">
+                &copy;2025. All Reserved By Foto Lab
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Bootstrap JS for brand slider -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- AOS JS for scroll animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            // easing: 'ease-in-out',
+            once: true
+            // offset: 100
+        });
+    </script>
+
+
+    <script src="/assessts/JS/index.js"></script>
+
+</body>
+
+</html>

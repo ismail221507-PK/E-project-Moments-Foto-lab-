@@ -1,0 +1,1215 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- this is for bootstrap file  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- This is for jquery cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- this is for icon cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS CSS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- this is a manual css file  -->
+    <link rel="stylesheet" href="/assessts/CSS/allminipage.css">
+</head>
+
+<body>
+    <header>
+        <!-- Top Navbar -->
+        <nav class="navbar navbar-expand-lg border-bottom">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="/assessts/Images/logo (foto lab).png" data-aos="zoom-in" data-aos-duration="1000"
+                        alt="Bootstrap" width="60" height="64">
+                </a>
+
+                <!-- Small screen: Search + Cart -->
+                <div class="d-flex d-lg-none ms-auto me-2 align-items-center gap-3">
+                    <i class="fa-solid fa-magnifying-glass" data-bs-toggle="modal" data-bs-target="#searchModal"
+                        style="cursor:pointer; font-size:20px;"></i>
+                    <div class="cart-items" data-bs-toggle="modal" data-bs-target="#cart-modal">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart_counter">0</span>
+                    </div>
+                    <div class="compare-items" data-bs-toggle="modal" data-bs-target="#compare-modal">
+                        <i class="fa-solid fa-code-compare"></i>
+                        <span id="compare_counter">0</span>
+                    </div>
+                </div>
+
+
+                <!-- Hamburger -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapsible Menu -->
+                <div class="collapse navbar-collapse" id="navbarMenu">
+
+                    <!-- Close button (inside collapse - only on mobile) -->
+                    <div class="close-btn-wrapper d-lg-none p-3 text-right">
+                        <button type="button" class="btn-close" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <!-- Main Nav -->
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0 gap-lg-4 text-center">
+                        <li class="nav-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100"><a
+                                class="nav-link active underline-effect" href="/all main pages/index.html">Home</a></li>
+                        <li class="nav-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200"><a
+                                class="nav-link underline-effect" href="/all main pages/contact.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"><a
+                                class="nav-link underline-effect" href="/all main pages/about.html">About Us</a></li>
+                    </ul>
+
+                    <!-- Large screen: Search + Cart + compare-->
+                    <div class="d-none d-lg-flex align-items-center gap-2">
+                        <i class="fa-solid fa-magnifying-glass" data-bs-toggle="modal" data-bs-target="#searchModal"
+                            style="cursor:pointer; font-size:20px;"></i>
+                        <div class="cart-items" data-bs-toggle="modal" data-bs-target="#cart-modal">
+                            <i class="fa-solid fa-cart-shopping" style="font-size: 30px;"></i>
+                            <span id="cart_counter">0</span>
+                        </div>
+                        <div class="compare-items" data-bs-toggle="modal" data-bs-target="#compare-modal">
+                            <i class="fa-solid fa-code-compare" style="font-size: 33px;"></i>
+                            <span id="compare_counter">0</span>
+
+                        </div>
+                    </div>
+
+                    <!-- Categories 0n small devices -->
+                    <ul class="navbar-nav flex-column d-lg-none text-center gap-2 product-categories">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle underline-effect" data-aos="zoom-in"
+                                data-aos-duration="1000" data-aos-delay="100"
+                                href="/all main pages/productpages/camera.html" data-bs-toggle="dropdown">Camera</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/camera.html#mirrorless-camera">Mirrorless
+                                        Cameras</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/camera.html#dslr-camera">DSLR Cameras</a>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/camera.html#point&shoot-camera">Point & Shoot
+                                        Cameras</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle underline-effect"
+                                href="/all main pages/productpages/lens.html" data-bs-toggle="dropdown"
+                                data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="150">Lenses</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/lens.html#mirrorless-lens">Mirrorless
+                                        Lenses</a>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/lens.html#dslr-lens">DSLR
+                                        Lenses</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/lens.html#lens-accessories">Lens
+                                        Accessories</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle underline-effect"
+                                href="/all main pages/productpages/audio.html" data-bs-toggle="dropdown"
+                                data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+
+                                Audio
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/audio.html#microphone">Microphones</a></li>
+                                <li class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/audio.html#wireless-microphone">Wireless
+                                        Microphones</a></li>
+                                <li class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/audio.html#podcasting-microphone">Podcasting</a>
+                                </li>
+                                <li class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/audio.html#mobile-microphone">Mobile
+                                        Recording</a></li>
+                                <li class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/audio.html#studio-microphone">Studio
+                                        Recording</a></li>
+                                <li class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/audio.html#audio-accessories">Audio
+                                        Accessories</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle underline-effect"
+                                href="/all main pages/productpages/light.html" data-bs-toggle="dropdown"
+                                data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="250">
+                                Lighting & Studio
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/light.html#Continuous-lighing">Continuous
+                                        Lighting</a></li>
+                                <li class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/light.html#strobe-lighing">Strobe
+                                        Lighting</a>
+                                </li>
+                                <li class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/light.html#flash-lighing">Flash And On Camera
+                                        Lighting</a></li>
+                                <li class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/light.html#light-accessories">Lighting
+                                        Accessories</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle underline-effect"
+                                href="/all main pages/productpages/accessory.html" data-bs-toggle="dropdown"
+                                data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+                                Accessories
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/accessory.html#mCards-accessories">Memory
+                                        cards &
+                                        media</a></li>
+                                <li class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/accessory.html#tripod-accessories">Tripods &
+                                        supports</a></li>
+                                <li class="dropdown-divider">
+                                </li>
+
+                                <li><a class="dropdown-item"
+                                        href="/all main pages/productpages/accessory.html#bag-accessories">Camera bags &
+                                        cases</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Large screen categories -->
+        <div class="d-none d-lg-block" style="background-color: rgb(224, 243, 220);">
+            <div class="container-fluid">
+                <ul class="navbar-nav d-flex flex-row justify-content-center gap-4 py-2 product-categories">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle underline-effect" data-aos="zoom-in" data-aos-duration="1000"
+                            data-aos-delay="100" href="/all main pages/productpages/camera.html"
+                            data-bs-toggle="dropdown">Camera</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/camera.html#mirrorless-camera">Mirrorless
+                                    Cameras</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/camera.html#dslr-camera">DSLR Cameras</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/camera.html#point&shoot-camera">Point & Shoot
+                                    Cameras</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle underline-effect"
+                            href="/all main pages/productpages/lens.html" data-bs-toggle="dropdown" data-aos="zoom-in"
+                            data-aos-duration="1000" data-aos-delay="150">Lenses</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/lens.html#mirrorless-lens">Mirrorless Lenses</a>
+                            </li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/all main pages/productpages/lens.html#dslr-lens">DSLR
+                                    Lenses</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/lens.html#lens-accessories">Lens Accessories</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle underline-effect"
+                            href="/all main pages/productpages/audio.html" data-bs-toggle="dropdown" data-aos="zoom-in"
+                            data-aos-duration="1000" data-aos-delay="200">
+
+                            Audio
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/audio.html#microphone">Microphones</a></li>
+                            <li class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/audio.html#wireless-microphone">Wireless
+                                    Microphones</a></li>
+                            <li class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/audio.html#podcasting-microphone">Podcasting</a>
+                            </li>
+                            <li class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/audio.html#mobile-microphone">Mobile
+                                    Recording</a></li>
+                            <li class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/audio.html#studio-microphone">Studio
+                                    Recording</a></li>
+                            <li class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/audio.html#audio-accessories">Audio
+                                    Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle underline-effect"
+                            href="/all main pages/productpages/light.html" data-bs-toggle="dropdown" data-aos="zoom-in"
+                            data-aos-duration="1000" data-aos-delay="250">
+                            Lighting & Studio
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/light.html#Continuous-lighing">Continuous
+                                    Lighting</a></li>
+                            <li class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/light.html#strobe-lighing">Strobe Lighting</a>
+                            </li>
+                            <li class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/light.html#flash-lighing">Flash And On Camera
+                                    Lighting</a></li>
+                            <li class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/light.html#light-accessories">Lighting
+                                    Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle underline-effect"
+                            href="/all main pages/productpages/accessory.html" data-bs-toggle="dropdown"
+                            data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+                            Accessories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/accessory.html#mCards-accessories">Memory cards &
+                                    media</a></li>
+                            <li class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/accessory.html#tripod-accessories">Tripods &
+                                    supports</a></li>
+                            <li class="dropdown-divider">
+                            </li>
+
+                            <li><a class="dropdown-item"
+                                    href="/all main pages/productpages/accessory.html#bag-accessories">Camera bags &
+                                    cases</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Half Screen Search Modal & Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between">
+                    <form class="d-flex w-75 mb-3">
+                        <div class="input-group input-group-lg">
+                            <input id="searchInput" type="search" class="form-control" style=" box-shadow: none;"
+                                placeholder="Search products...">
+                            <button class="btn btn-success" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <!-- Close Button -->
+                    <div class="close-btn-wrapper text-end py-3 px-2">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                </div>
+                <div class="modal-body border-top">
+                    <div id="searchResults" class="row g-3 my-5"></div>
+                    <p id="noResults" class="text-center text-muted d-none">No products found</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- this is for cart body  -->
+    <div class="modal fade" id="cart-modal" tabindex="-1">
+        <div class="modal-dialog custom-compare-dialog">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <h5 class="modal-title">Cart Items</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body overflow-auto">
+                    <table class="table text-center table-striped" id="card_table">
+                        <thead>
+                            <tr>
+                                <th>Sr. No.</th>
+                                <th>Product</th>
+                                <th>Product Image</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody class="shopping-list">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- this is for compare body  -->
+    <div class="modal fade" id="compare-modal" tabindex="-1">
+        <div class="modal-dialog custom-compare-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Compare Items</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body overflow-auto">
+                    <table class="table text-center table-striped" id="compare_table">
+                        <thead>
+                            <tr>
+                                <th>Sr. No.</th>
+                                <th>Product</th>
+                                <th>Product Image</th>
+                                <th>Price</th>
+                                <th>Key Features</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Overlay for mobile menu like blackish effect -->
+    <div id="menuOverlay"></div>
+    <main>
+
+
+
+        <div class="main-banner">
+            <h1 class="text-white" data-aos="fade" data-aos-duration="1000">Pro Audio</h1>
+        </div>
+        <div class="d-flex  my-4 mx-3">
+            <select id="brandFilter" class="form-select w-auto">
+                <option>All brands</option>
+                <option>Shure</option>
+                <option>Rode</option>
+                <option>Audio Technica</option>
+                <option>Maono</option>
+                <option>Boya</option>
+                <option>Synco</option>
+                <option>Iedistar</option>
+                <option>Generic</option>
+                <option>Techmanistan</option>
+                <option>Neumann</option>
+            </select>
+        </div>
+        <section id="microphone" class="border-bottom">
+            <div class="container py-3 d-flex flex-column justify-content-center align-items-center gap-4">
+                <h1 style="  color: #0e4d37" data-aos="fade" data-aos-duration="1000">Microphones</h1>
+                <div class="row justify-content-evenly justify-content-sm-center" style="width: 100%;">
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 mb-lg-2 px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"
+                            data-brand="Shure">
+                            <img src="/assessts/Images/audio page images/SM58.jpg"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="100" alt="SM58">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h2>SM58</h2>
+                                    <span> PKR 25,000</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>Dynamic handheld vocal</li>
+                                    <li>Cardioid polar pattern</li>
+                                    <li>Industry standard for live vocals</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/Sm58 Microphone Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 mb-lg-2 px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+                            data-brand="Rode">
+                            <img src="/assessts/Images/audio page images/Rode NT1.webp"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="100" alt="Rode NT1">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h2>Rode NT1 </h2>
+                                    <span> PKR 80,000</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>Low self-noise </li>
+                                    <li>Hybrid connectivity</li>
+                                    <li>Advanced features </li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/Rode Nt1 Microphone Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 m-lg-0 m-md-auto px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"
+                            data-brand="Audio Technica">
+                            <img src="/assessts/Images/audio page images/AT2020.webp"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="300" alt="AT2020 ">
+                            <div class="card-body" data-aos="fade" data-aos-duration="1000" data-aos-delay="300">
+                                <div class="card-title text-center">
+                                    <h2>AT2020 </h2>
+                                    <span> PKR 35,999</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>Entry-level condenser mic</li>
+                                    <li>Wide dynamic range</li>
+                                    <li>Great for vocals & instruments</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/At2020 Microphone Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="wireless-microphone" class="border-bottom">
+            <div class="container py-3 d-flex flex-column justify-content-center align-items-center gap-4">
+                <h1 style="  color: #0e4d37" data-aos="fade" data-aos-duration="1000">Wireless Microphones</h1>
+                <div class="row justify-content-evenly justify-content-sm-center" style="width: 100%;">
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 mb-lg-2 px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"
+                            data-brand="Rode">
+                            <img src="/assessts/Images/audio page images/GO II (2-Person).jpg"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="100" alt="GO II (2-Person)">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h2>GO II (2-Person)</h2>
+                                    <span> PKR 68,000</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>Dual transmitters</li>
+                                    <li>Built-in mics + 3.5 mm input</li>
+                                    <li>7 hrs battery + USB power</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/Go Ii 2person Microphone Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 mb-lg-2 px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+                            data-brand="Boya">
+                            <img src="/assessts/Images/audio page images/Mini 12 Dual.jpg"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="100" alt="Mini 12 Dual">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h2>Mini 12 Dual</h2>
+                                    <span> PKR 19,000</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>Dual wireless mics</li>
+                                    <li>Comes with charging case</li>
+                                    <li>Android Type-C & iPhone support</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/Mini 12 Dual Microphone Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 m-lg-0 m-md-auto px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"
+                            data-brand="Synco">
+                            <img src="/assessts/Images/audio page images/G3 Recording.jpg"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="300" alt="G3 Recording">
+                            <div class="card-body" data-aos="fade" data-aos-duration="1000" data-aos-delay="300">
+                                <div class="card-title text-center">
+                                    <h2>G3 Recording</h2>
+                                    <span> PKR 59,700</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>2.4 GHz wireless</li>
+                                    <li>Good for recording</li>
+                                    <li>Decent range</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/G3 Recording Microphone Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="podcasting-microphone" class="border-bottom">
+            <div class="container py-3 d-flex flex-column justify-content-center align-items-center gap-4">
+                <h1 style="  color: #0e4d37" data-aos="fade" data-aos-duration="1000">Podcasting Microphones</h1>
+                <div class="row justify-content-evenly justify-content-sm-center" style="width: 100%;">
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 mb-lg-2 px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"
+                            data-brand="Rode">
+                            <img src="/assessts/Images/audio page images/PodMic Dynamic.jpg"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="100" alt="PodMic Dynamic">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h2>PodMic Dynamic</h2>
+                                    <span> PKR 43,000</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>Dynamic XLR connection</li>
+                                    <li>Internal pop filter & shock mount</li>
+                                    <li>Warm voice, speech-tailored</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/Podmic Dynamic Microphone Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 mb-lg-2 px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+                            data-brand="Maono">
+                            <img src="/assessts/Images/audio page images/PD200X Dynamic.webp"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="100" alt="PD200X Dynamic">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h2>PD200X Dynamic</h2>
+                                    <span> PKR 22,500</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>USB & XLR dual outputs</li>
+                                    <li>Noise suppression</li>
+                                    <li>PC/Mac compatibility</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/Pd200x Dynamic Microphone Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 m-lg-0 m-md-auto px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"
+                            data-brand="Audio Technica">
+                            <img src="/assessts/Images/audio page images/AT2040 Dynamic.jpg"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="300" alt="AT2040 Dynamic">
+                            <div class="card-body" data-aos="fade" data-aos-duration="1000" data-aos-delay="300">
+                                <div class="card-title text-center">
+                                    <h2> AT2040 Dynamic</h2>
+                                    <span> PKR 69,000</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>Hyper-cardioid polar pattern</li>
+                                    <li>Optimized for voice</li>
+                                    <li>Durable shockmount included</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/At2040 Dynamic Microphone Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="mobile-microphone" class="border-bottom">
+            <div class="container py-3 d-flex flex-column justify-content-center align-items-center gap-4">
+                <h1 style="  color: #0e4d37" data-aos="fade" data-aos-duration="1000">Mobile Recording Microphones</h1>
+                <div class="row justify-content-evenly justify-content-sm-center" style="width: 100%;">
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 mb-lg-2 px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"
+                            data-brand="Iedistar">
+                            <img src="/assessts/Images/audio page images/MD-3.jpg"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="100" alt="MD-3">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h2>MD-3</h2>
+                                    <span> PKR 1,800</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>Type-C plug</li>
+                                    <li>Compact</li>
+                                    <li>Noise reduction</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/Md3 Microphone Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 mb-lg-2 px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+                            data-brand="Generic">
+                            <img src="/assessts/Images/audio page images/UHF Dual.jpg"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="100" alt="UHF Dual">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h2>UHF Dual</h2>
+                                    <span> PKR 32,700</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>Dual channel</li>
+                                    <li>100 m range</li>
+                                    <li>Camera/mobile</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/Uhf Dual Microphone Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 m-lg-0 m-md-auto px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"
+                            data-brand="Techmanistan">
+                            <img src="/assessts/Images/audio page images/Lavalier Pro.webp"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="300" alt="Lavalier Pro">
+                            <div class="card-body" data-aos="fade" data-aos-duration="1000" data-aos-delay="300">
+                                <div class="card-title text-center">
+                                    <h2>Lavalier Pro</h2>
+                                    <span> PKR 2,200</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>Clip-on</li>
+                                    <li>Android/iOS</li>
+                                    <li>Clear sound</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/Lavalier Pro Microphone Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="studio-microphone" class="border-bottom">
+            <div class="container py-3 d-flex flex-column justify-content-center align-items-center gap-4">
+                <h1 style="  color: #0e4d37" data-aos="fade" data-aos-duration="1000">Studio Recording Microphones</h1>
+                <div class="row justify-content-evenly justify-content-sm-center" style="width: 100%;">
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 mb-lg-2 px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"
+                            data-brand="Shure">
+                            <img src="/assessts/Images/audio page images/SM7B Dynamic.jpg"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="100" alt="">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h2>SM7B Dynamic</h2>
+                                    <span> PKR 145,00</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>Dynamic cardioid</li>
+                                    <li>Built-in pop filter</li>
+                                    <li>Great for vocals</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/Sm7b Dynamic Microphone Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 mb-lg-2 px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+                            data-brand="Audio Technica">
+                            <img src="/assessts/Images/audio page images/AT2020 Condenser.jpg"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="100" alt="">
+                            <div class="card-body">
+                                <div class="card-title text-center">
+                                    <h2>AT2020 Condenser</h2>
+                                    <span> PKR 33,000</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>Cardioid pattern</li>
+                                    <li>High SPL handling</li>
+                                    <li>Clear vocals</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/At2020 Condenser Microphone Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 m-lg-0 m-md-auto px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"
+                            data-brand="Neumann">
+                            <img src="/assessts/Images/audio page images/TLM 102 Condenser.jpeg"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="300" alt="TLM 102 Condenser">
+                            <div class="card-body" data-aos="fade" data-aos-duration="1000" data-aos-delay="300">
+                                <div class="card-title text-center">
+                                    <h2>TLM 102 Condenser</h2>
+                                    <span> PKR 244,500</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>Large diaphragm</li>
+                                    <li>Handles 144 dB SPL</li>
+                                    <li>Compact design</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/Tlm102 Condenser Microphone Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- shown when no card matches the filter -->
+        <div id="no-results" class="alert alert-warning text-center mt-3 d-none">
+            At that time No products found for this brand!
+        </div>
+        <div id="audio-accessories" class="border-bottom">
+            <div class="container-fluid d-flex justify-content-around align-items-center flex-wrap"
+                style="width: 100%;">
+                <h1 style="  color: #0e4d37" class="border-bottom" data-aos="fade" data-aos-duration="1000">Audio
+                    Accessories</h1>
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <select id="accessories_filter" class="form-select w-auto">
+                        <option>All accessories</option>
+                        <option>Pop Filter</option>
+                        <option>Shock Mount</option>
+                        <option>Audio Interface</option>
+                        <option>Headphones</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="container py-3 d-flex flex-column justify-content-center align-items-center gap-4">
+                <div class="row justify-content-evenly justify-content-sm-center" style="width: 100%;"
+                    id="accessories_filter_cards">
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 mb-lg-2 px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"
+                            data-brand="Pop Filter">
+                            <img src="/assessts/Images/audio page images/Pop Filter (PSA1 Kit).webp"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="100" alt="">
+                            <div class="card-body" data-aos="fade" data-aos-duration="1000" data-aos-delay="100">
+                                <div class="card-title text-center">
+                                    <h2>Pop Filter (PSA1 Kit) </h2>
+                                    <span> PKR 6,500</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>Dual-layer mesh </li>
+                                    <li> Fits boom arms</li>
+                                    <li>Studio quality</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/Pop Filter Psa1 Kit Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 mb-lg-2 px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+                            data-brand="Pop Filter">
+                            <img src="/assessts/Images/audio page images/Aokeo Professional.jpg"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="200" alt="">
+                            <div class="card-body" data-aos="fade" data-aos-duration="1000" data-aos-delay="200">
+                                <div class="card-title text-center">
+                                    <h2>Aokeo Professional</h2>
+                                    <span> PKR 3,500</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>Flexible gooseneck</li>
+                                    <li>Clamp mount</li>
+                                    <li>Dual-layer mesh</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/Aokeo Professional Pop Filter Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 mb-lg-2 px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"
+                            data-brand="Shock Mount">
+                            <img src="/assessts/Images/audio page images/SM6.jpg"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="300" alt="">
+                            <div class="card-body" data-aos="fade" data-aos-duration="1000" data-aos-delay="300">
+                                <div class="card-title text-center">
+                                    <h2>SM6</h2>
+                                    <span> PKR 9,500</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>Mic isolation</li>
+                                    <li>Built-in pop filter</li>
+                                    <li>Adjustable angle</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/Sm6 Microphone Shockmount Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 mb-lg-2 px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"
+                            data-brand="Shock Mount">
+                            <img src="/assessts/Images/audio page images/AU-SH01.png"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="300" alt="">
+                            <div class="card-body" data-aos="fade" data-aos-duration="1000" data-aos-delay="300">
+                                <div class="card-title text-center">
+                                    <h2>AU-SH01</h2>
+                                    <span> PKR 4,500</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>Universal fit</li>
+                                    <li>Elastic suspension</li>
+                                    <li>Lightweight</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/Au Sh01 Headphone Shockmount Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 mb-lg-2 px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"
+                            data-brand="Audio Interface">
+                            <img src="/assessts/Images/audio page images/Focusrite Scarlett.webp"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="300" alt="">
+                            <div class="card-body" data-aos="fade" data-aos-duration="1000" data-aos-delay="300">
+                                <div class="card-title text-center">
+                                    <h2>Focusrite Scarlett</h2>
+                                    <span> PKR 45,000</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>1 XLR input</li>
+                                    <li>Phantom power</li>
+                                    <li>USB powered</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/Focusrite Scarlett Audio Interface Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 mb-lg-2 px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"
+                            data-brand="Audio Interface">
+                            <img src="/assessts/Images/audio page images/Behringer UMC22.jpg"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="300" alt="">
+                            <div class="card-body" data-aos="fade" data-aos-duration="1000" data-aos-delay="300">
+                                <div class="card-title text-center">
+                                    <h2>Behringer UMC22</h2>
+                                    <span> PKR 22,000</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>XLR/Line combo</li>
+                                    <li>Direct monitoring</li>
+                                    <li>Budget friendly</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/Behringer Umc22 Audio Interface Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 mb-lg-2 px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"
+                            data-brand="Headphones">
+                            <img src="/assessts/Images/audio page images/ATH-M20x.jpg"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="300" alt="">
+                            <div class="card-body" data-aos="fade" data-aos-duration="1000" data-aos-delay="300">
+                                <div class="card-title text-center">
+                                    <h2>ATH-M20x</h2>
+                                    <span> PKR 15,000</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>Closed-back</li>
+                                    <li>Flat sound</li>
+                                    <li>Comfortable pads</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/Ath M20x Headphones Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 m-lg-0 m-md-auto px-sm-2 px-0">
+                        <div class="card mt-3 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"
+                            data-brand="Headphones">
+                            <img src="/assessts/Images/audio page images/K240 Studio.jpg"
+                                class="img-fluid card-img-top product-image" data-aos="fade" data-aos-duration="1000"
+                                data-aos-delay="300" alt="">
+                            <div class="card-body" data-aos="fade" data-aos-duration="1000" data-aos-delay="300">
+                                <div class="card-title text-center">
+                                    <h2>K240 Studio</h2>
+                                    <span> PKR 18,000</span>
+                                </div>
+                                <ul class="product-feature">
+                                    <li>Semi-open</li>
+                                    <li>Wide frequency</li>
+                                    <li>Lightweight design</li>
+                                </ul>
+                                <button class="btn first-btn"><a
+                                        href="/assessts/Images/audio page images/doc/K240 Studio Headphones Product Page.pdf"
+                                        download="" style="text-decoration: none; color: white;">Detail</a></button>
+                                <button class="btn sec-btn d-xl-inline d-none">Compare</button>
+                                <button class="btn third-btn">Add To Cart</button>
+                                <button class="btn sec-btn d-xl-none d-inline "><i
+                                        class="fa-solid fa-code-compare"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+    <footer>
+        <div class="foot-panel1 gap-md-4 border-bottom py-4">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6  text-center" data-aos="fade" data-aos-duration="1000"
+                        data-aos-delay="100">
+                        <a class="navbar-brand" href="#">
+                            <img src="/assessts/Images/logo (foto lab).png" style="filter: invert();" alt="Bootstrap"
+                                width="70" height="64">
+                        </a>
+                        <p>For Digital Camera, <span class="d-block">Since 1997</span></p>
+
+                    </div>
+                    <div class="col-lg-3 col-md-6  text-center text-lg-start">
+                        <h2 data-aos="fade" data-aos-duration="1000" data-aos-delay="200">Quick Links</h2>
+                        <ul class="list-unstyled">
+
+                            <li data-aos="fade" data-aos-duration="1000" data-aos-delay="200"><a
+                                    href="/all main pages/index.html" class="text-decoration-none">Home</a></li>
+                            <li data-aos="fade" data-aos-duration="1000" data-aos-delay="200"><a
+                                    href="/all main pages/about.html" class="text-decoration-none">About</a></li>
+                            <li data-aos="fade" data-aos-duration="1000" data-aos-delay="200"><a
+                                    href="/all main pages/contact.html" class="text-decoration-none">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6  text-center text-lg-start">
+                        <h2 data-aos="fade" data-aos-duration="1000" data-aos-delay="300">Service we Provide</h2>
+                        <ul class="list-unstyled">
+
+                            <li data-aos="fade" data-aos-duration="1000" data-aos-delay="300"><a href="#"
+                                    class="text-decoration-none">Camera</a></li>
+                            <li data-aos="fade" data-aos-duration="1000" data-aos-delay="300"><a href="#"
+                                    class="text-decoration-none">Camera Lenses</a></li>
+                            <li data-aos="fade" data-aos-duration="1000" data-aos-delay="300"><a href="#"
+                                    class="text-decoration-none">Pro Audio</a></li>
+                            <li data-aos="fade" data-aos-duration="1000" data-aos-delay="300"><a href="#"
+                                    class="text-decoration-none">Lighting & Studio</a></li>
+                            <li data-aos="fade" data-aos-duration="1000" data-aos-delay="300"><a href="#"
+                                    class="text-decoration-none">Accessories</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6  text-center ">
+                        <h2 data-aos="fade" data-aos-duration="1000" data-aos-delay="400">Follow Us</h2>
+                        <div class="d-flex justify-content-center gap-3"> <i class="fa-brands fa-youtube "
+                                data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"
+                                style="color: #ff1e05;"></i>
+                            <i class="fa-brands fa-instagram rounded" data-aos="fade-up" data-aos-duration="1000"
+                                data-aos-delay="600"
+                                style="background: linear-gradient(#feda75, #fa7e1e,#d62976, #962fbf,#4f5bd5);"></i>
+                            <i class="fa-brands fa-facebook" data-aos="fade-up" data-aos-duration="1000"
+                                data-aos-delay="700" style="color: #1046a2;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot-panel2 py-2 ">
+            <div class="text-center">
+                &copy;2025. All Reserved By Foto Lab
+            </div>
+        </div>
+    </footer>
+    <!-- this is bootstrap js file  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <!-- AOS JS for scroll animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
+    <!-- this is manual js file  -->
+    <script src="/assessts/JS/audio.js"></script>
+</body>
+
+</html>

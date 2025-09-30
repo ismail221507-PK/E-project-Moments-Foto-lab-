@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Lab - Contact Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- This is for bootstrap  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- AOS CSS for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- this is manual css  -->
+  <link rel="stylesheet" href="/assessts/CSS/contact.css">
+
+</head>
+
+<body>
+  <header>
+    <!-- Top Navbar -->
+    <nav class="navbar navbar-expand-lg border-bottom">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="/assessts/Images/logo (foto lab).png" data-aos="zoom-in" data-aos-duration="1000" alt="Bootstrap"
+            width="60" height="64">
+        </a>
+
+
+
+
+        <!-- Hamburger -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+          aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible Menu -->
+        <div class="collapse navbar-collapse" id="navbarMenu">
+
+          <!-- Close button (inside collapse - only on mobile) -->
+          <div class="close-btn-wrapper d-lg-none p-3 text-right">
+            <button type="button" class="btn-close" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+              aria-label="Close"></button>
+          </div>
+
+          <!-- Main Nav -->
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0 gap-lg-4 text-center">
+            <li class="nav-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100"><a
+                class="nav-link active underline-effect" href="/all main pages/index.html">Home</a></li>
+            <li class="nav-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200"><a
+                class="nav-link underline-effect" href="/all main pages/contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"><a
+                class="nav-link underline-effect" href="/all main pages/about.html">About Us</a></li>
+          </ul>
+
+
+
+          <!-- Categories 0n small devices -->
+          <ul class="navbar-nav flex-column d-lg-none text-center gap-2 product-categories">
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle underline-effect" data-aos="zoom-in" data-aos-duration="1000"
+                data-aos-delay="100" href="/all main pages/productpages/camera.html"
+                data-bs-toggle="dropdown">Camera</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item"
+                    href="/all main pages/productpages/camera.html#mirrorless-camera">Mirrorless
+                    Cameras</a></li>
+                <li class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/all main pages/productpages/camera.html#dslr-camera">DSLR
+                    Cameras</a>
+                </li>
+                <li class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/all main pages/productpages/camera.html#point&shoot-camera">Point &
+                    Shoot
+                    Cameras</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle underline-effect" href="/all main pages/productpages/lens.html"
+                data-bs-toggle="dropdown" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="150">Lenses</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/all main pages/productpages/lens.html#mirrorless-lens">Mirrorless
+                    Lenses</a>
+                </li>
+                <li class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/all main pages/productpages/lens.html#dslr-lens">DSLR
+                    Lenses</a></li>
+                <li class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/all main pages/productpages/lens.html#lens-accessories">Lens
+                    Accessories</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle underline-effect" href="/all main pages/productpages/audio.html"
+                data-bs-toggle="dropdown" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+
+                Audio
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/all main pages/productpages/audio.html#microphone">Microphones</a>
+                </li>
+                <li class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/all main pages/productpages/audio.html#wireless-microphone">Wireless
+                    Microphones</a></li>
+                <li class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item"
+                    href="/all main pages/productpages/audio.html#podcasting-microphone">Podcasting</a>
+                </li>
+                <li class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/all main pages/productpages/audio.html#mobile-microphone">Mobile
+                    Recording</a></li>
+                <li class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/all main pages/productpages/audio.html#studio-microphone">Studio
+                    Recording</a></li>
+                <li class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/all main pages/productpages/audio.html#audio-accessories">Audio
+                    Accessories</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle underline-effect" href="/all main pages/productpages/light.html"
+                data-bs-toggle="dropdown" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="250">
+                Lighting & Studio
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item"
+                    href="/all main pages/productpages/light.html#Continuous-lighing">Continuous
+                    Lighting</a></li>
+                <li class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/all main pages/productpages/light.html#strobe-lighing">Strobe
+                    Lighting</a>
+                </li>
+                <li class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/all main pages/productpages/light.html#flash-lighing">Flash And On
+                    Camera
+                    Lighting</a></li>
+                <li class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/all main pages/productpages/light.html#light-accessories">Lighting
+                    Accessories</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle underline-effect" href="/all main pages/productpages/accessory.html"
+                data-bs-toggle="dropdown" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+                Accessories
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item"
+                    href="/all main pages/productpages/accessory.html#mCards-accessories">Memory
+                    cards &
+                    media</a></li>
+                <li class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item"
+                    href="/all main pages/productpages/accessory.html#tripod-accessories">Tripods &
+                    supports</a></li>
+                <li class="dropdown-divider">
+                </li>
+
+                <li><a class="dropdown-item" href="/all main pages/productpages/accessory.html#bag-accessories">Camera
+                    bags &
+                    cases</a></li>
+              </ul>
+            </li>
+          </ul>
+
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- Large screen categories -->
+    <div class="d-none d-lg-block" style="background-color: rgb(224, 243, 220);">
+      <div class="container-fluid">
+        <ul class="navbar-nav d-flex flex-row justify-content-center gap-4 py-2 product-categories">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle underline-effect" data-aos="zoom-in" data-aos-duration="1000"
+              data-aos-delay="100" href="/all main pages/productpages/camera.html" data-bs-toggle="dropdown">Camera</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/all main pages/productpages/camera.html#mirrorless-camera">Mirrorless
+                  Cameras</a></li>
+              <li class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/all main pages/productpages/camera.html#dslr-camera">DSLR Cameras</a>
+              </li>
+              <li class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/all main pages/productpages/camera.html#point&shoot-camera">Point &
+                  Shoot
+                  Cameras</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle underline-effect" href="/all main pages/productpages/lens.html"
+              data-bs-toggle="dropdown" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="150">Lenses</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/all main pages/productpages/lens.html#mirrorless-lens">Mirrorless
+                  Lenses</a>
+              </li>
+              <li class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/all main pages/productpages/lens.html#dslr-lens">DSLR
+                  Lenses</a></li>
+              <li class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/all main pages/productpages/lens.html#lens-accessories">Lens
+                  Accessories</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle underline-effect" href="/all main pages/productpages/audio.html"
+              data-bs-toggle="dropdown" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+
+              Audio
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/all main pages/productpages/audio.html#microphone">Microphones</a>
+              </li>
+              <li class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/all main pages/productpages/audio.html#wireless-microphone">Wireless
+                  Microphones</a></li>
+              <li class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item"
+                  href="/all main pages/productpages/audio.html#podcasting-microphone">Podcasting</a>
+              </li>
+              <li class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/all main pages/productpages/audio.html#mobile-microphone">Mobile
+                  Recording</a></li>
+              <li class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/all main pages/productpages/audio.html#studio-microphone">Studio
+                  Recording</a></li>
+              <li class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/all main pages/productpages/audio.html#audio-accessories">Audio
+                  Accessories</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle underline-effect" href="/all main pages/productpages/light.html"
+              data-bs-toggle="dropdown" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="250">
+              Lighting & Studio
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/all main pages/productpages/light.html#Continuous-lighing">Continuous
+                  Lighting</a></li>
+              <li class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/all main pages/productpages/light.html#strobe-lighing">Strobe
+                  Lighting</a>
+              </li>
+              <li class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/all main pages/productpages/light.html#flash-lighing">Flash And On
+                  Camera
+                  Lighting</a></li>
+              <li class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/all main pages/productpages/light.html#light-accessories">Lighting
+                  Accessories</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle underline-effect" href="/all main pages/productpages/accessory.html"
+              data-bs-toggle="dropdown" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+              Accessories
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/all main pages/productpages/accessory.html#mCards-accessories">Memory
+                  cards &
+                  media</a></li>
+              <li class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/all main pages/productpages/accessory.html#tripod-accessories">Tripods
+                  &
+                  supports</a></li>
+              <li class="dropdown-divider">
+              </li>
+
+              <li><a class="dropdown-item" href="/all main pages/productpages/accessory.html#bag-accessories">Camera
+                  bags &
+                  cases</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Overlay for mobile menu like blackish effect -->
+  <div id="menuOverlay"></div>
+
+  <!-- Hero Section -->
+  <section class="contact-heading d-flex justify-content-center align-items-center flex-column">
+    <h1 data-aos="zoom-Out">Conatct Us</h1>
+
+  </section>
+  <section class="d-flex justify-content-center align-items-center">
+
+    <!-- Contact Form -->
+    <div class="container contact-container m-0 py-sm-4 my-sm-3">
+      <h1 class="text-center" data-aos="fade" style="color: #0a3d2f; text-shadow: 3px 3px 5px rgb(190, 188, 188);">Get
+        In Touch</h1>
+      <div class="row justify-content-evenly align-items-center">
+        <div class="col-12 col-lg-5 ">
+          <!-- Contact Info -->
+          <div class="contact-info my-lg-0 my-4">
+            <p><i class="fas fa-map-marker-alt" data-aos="fade-right" data-aos-delay="100"></i><span
+                data-aos="fade-down" data-aos-delay="120"> Karachi, Pakistan</span></p>
+            <p><i class="fas fa-phone" data-aos="fade-right" data-aos-delay="150"></i> <span data-aos="fade-up"
+                data-aos-delay="170">+923-25352-21</span></p>
+            <p><i class="fas fa-envelope" data-aos="fade-right" data-aos-delay="200"></i> <span data-aos="fade-up"
+                data-aos-delay="220">Fotolab@gmail.com</span></p>
+          </div>
+
+        </div>
+        <div class="col-12 col-lg-5 py-4">
+          <form class=" p-4 d-flex flex-column justify-content-center align-items-center ">
+            <input type="text" data-aos="fade-up" class="form-control mb-3 bg-transparent"
+              placeholder="Enter Your Email Address">
+            <input type="text" data-aos="fade-up" class="form-control mb-3 bg-transparent"
+              placeholder="Enter your pasword">
+            <textarea class="form-control mb-3 bg-transparent" data-aos="fade-up"
+              placeholder=" enter yor message"></textarea>
+            <button class="btn ms-auto me-auto" data-aos="fade">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-10">
+          <div class="map">
+            <iframe data-aos="zoom-in"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28951.5857998512!2d67.0104!3d24.8607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33bb7f16e9bcd%3A0x36c8e06f6d0e2b8e!2sKarachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1694521745678!5m2!1sen!2s"
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+  <!-- this is footer  -->
+  <footer>
+    <div class="foot-panel1 gap-md-4 border-bottom py-4">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3 col-md-6  text-center" data-aos="fade" data-aos-duration="1000" data-aos-delay="100">
+            <a class="navbar-brand" href="#">
+              <img src="/assessts/Images/logo (foto lab).png" style="filter:invert()" alt="Bootstrap" width="70"
+                height="64">
+            </a>
+            <p>For Digital Camera, <span class="d-block">Since 1997</span></p>
+
+          </div>
+          <div class="col-lg-3 col-md-6  text-center text-lg-start">
+            <h2 data-aos="fade" data-aos-duration="1000" data-aos-delay="200">Quick Links</h2>
+            <ul class="list-unstyled">
+
+              <li data-aos="fade" data-aos-duration="1000" data-aos-delay="200"><a href="/all main pages/index.html"
+                  class="text-decoration-none">Home</a></li>
+              <li data-aos="fade" data-aos-duration="1000" data-aos-delay="200"><a href="/all main pages/about.html"
+                  class="text-decoration-none">About</a></li>
+              <li data-aos="fade" data-aos-duration="1000" data-aos-delay="200"><a href="/all main pages/contact.html"
+                  class="text-decoration-none">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6  text-center text-lg-start">
+            <h2 data-aos="fade" data-aos-duration="1000" data-aos-delay="300">Service we Provide</h2>
+            <ul class="list-unstyled">
+
+              <li data-aos="fade" data-aos-duration="1000" data-aos-delay="300"><a href="#"
+                  class="text-decoration-none">Camera</a></li>
+              <li data-aos="fade" data-aos-duration="1000" data-aos-delay="300"><a href="#"
+                  class="text-decoration-none">Camera Lenses</a></li>
+              <li data-aos="fade" data-aos-duration="1000" data-aos-delay="300"><a href="#"
+                  class="text-decoration-none">Pro Audio</a></li>
+              <li data-aos="fade" data-aos-duration="1000" data-aos-delay="300"><a href="#"
+                  class="text-decoration-none">Lighting & Studio</a></li>
+              <li data-aos="fade" data-aos-duration="1000" data-aos-delay="300"><a href="#"
+                  class="text-decoration-none">Accessories</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center text-lg-start ">
+            <h2 data-aos="fade" data-aos-duration="1000" data-aos-delay="400">Follow Us</h2>
+            <div class="d-flex justify-content-center gap-3"> <i class="fa-brands fa-youtube " data-aos="fade-up"
+                data-aos-duration="1000" data-aos-delay="500" style="color: #ff1e05;"></i>
+              <i class="fa-brands fa-instagram rounded" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"
+                style="background: linear-gradient(#feda75, #fa7e1e,#d62976, #962fbf,#4f5bd5);"></i>
+              <i class="fa-brands fa-facebook" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700"
+                style="color: #1046a2;"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot-panel2 py-2 ">
+      <div class="text-center">
+        &copy;2025. All Reserved By Foto Lab
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- this is boostrap js file  -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <!-- AOS JS for scroll animations -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      // easing: 'ease-in-out',
+      once: true,
+      // offset: 100
+    });
+  </script>
+  <!-- this is manual js file  -->
+  <script src="/assessts/JS/contact.js"></script>
+
+</body>
+
+</html>
